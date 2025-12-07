@@ -5,6 +5,19 @@ from rag_chatBot import ask_garden_bot
 
 app = FastAPI(title="GreenAI Plant Assistant")
 
+origins = [
+    "http://127.0.0.1:5500",   # your static HTML origin
+    "http://localhost:5173",   # optional, if you also use Vite later
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,     # or ["*"] while testing
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 class ChatRequest(BaseModel):
     message: str
 
