@@ -58,7 +58,7 @@ else:
                 **meta
             })
 
-    with open("../data/kb_chunks.jsonl", "w", encoding="utf8") as f:
+    with open("./data/kb_chunks.jsonl", "w", encoding="utf8") as f:
         for item in out:
             f.write(json.dumps(item) + "\n")
 
