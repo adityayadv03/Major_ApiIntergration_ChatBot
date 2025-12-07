@@ -5,7 +5,7 @@ import os
 # 1. Load Data
 chunks = []
 docs = []
-data_path = "../data/kb_chunks.jsonl"
+data_path = "./data/kb_chunks.jsonl"
 
 if not os.path.exists(data_path):
     print("Error: kb_chunks.jsonl not found. Run build_kb.py first.")
